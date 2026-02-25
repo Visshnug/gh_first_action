@@ -8,5 +8,5 @@ def greet(name: str) -> str:
 
 if __name__ == "__main__":
     # run a quick demonstration
-    user = input("Enter your name: ")
+    user = "Zenitsu"
     print(greet(user))
