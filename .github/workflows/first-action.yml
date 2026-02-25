@@ -10,6 +10,11 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version: latest
+      - name: Install dependencies
+        run: |
+          pip install pytest
+          pip3 install pytest
+        
       - name: Build
         run: python3 basic.py
 
