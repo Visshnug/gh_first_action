@@ -4,7 +4,14 @@ jobs:
   first_job:
     runs-on: ubuntu-latest
     steps:
-      - name: Print greeting
-        run: echo "Hello your first action"
-      - name: Print goodbye
-        run: echo "Tata"
+      - name: Get code
+        uses: actions/checkout@v6.0.2
+      - name: Install python  
+        uses: actions/setup-node@v6
+        with:
+          node-version: latest
+      - name: Install dependencies
+        run: sudo apt install python3
+
+      - name: Run test
+        run: python3
